@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "5eb5088d-cbb3-4fc9-b542-ecc54af497e3",
+		"name": "Conquerer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31557889",
+		"_collection_link": "https://robot-137807.postman.co/workspace/New-Team-Workspace~48538f11-6096-43b7-800b-e7ef6b557f44/collection/31557889-5eb5088d-cbb3-4fc9-b542-ecc54af497e3?action=share&source=collection_link&creator=31557889"
+	},
+	"item": [
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/get-posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"get-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4MCwiaWF0IjoxNzA1NjY0MTMxLCJleHAiOjE3MDkyNjA1MzF9.KR0BKzaLay8Sv0dKUSEoyOS87ytCRZVqCSMR8ph365Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Money\",\r\n    \"title\": \"Money Management Pro8\",\r\n    \"body\": \"8.An economy[a] is an area of the production, distribution and trade, as well as consumption of goods and services. In general, it is defined as a social domain that emphasize the practices, discourses, and material expressions associated with the production, use, and management of scarce resources.[3] \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/blogdetail/create-post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogdetail",
+								"create-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/blogdetail/add-comment?Authorization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogdetail",
+								"add-comment"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4MCwiaWF0IjoxNzA1NjY0MTMxLCJleHAiOjE3MDkyNjA1MzF9.KR0BKzaLay8Sv0dKUSEoyOS87ytCRZVqCSMR8ph365Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"9updated.An economy[a] is an area of the production, distribution and trade, as well as consumption of goods and services. In general, it is defined as a social domain that emphasize the practices, discourses, and material expressions associated with the production, use, and management of scarce resources.[3]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/blogdetail/update-post/KSVWr49Bacj0HQLLzabELuCI",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogdetail",
+								"update-post",
+								"KSVWr49Bacj0HQLLzabELuCI"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lastPosts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "byCategory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "searchTerm",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getPost",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4MCwiaWF0IjoxNzA1NjY0MTMxLCJleHAiOjE3MDkyNjA1MzF9.KR0BKzaLay8Sv0dKUSEoyOS87ytCRZVqCSMR8ph365Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/blogdetail/delete-post/CbbCUZc5T5nRgeVr8Ygt6udz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blogdetail",
+								"delete-post",
+								"CbbCUZc5T5nRgeVr8Ygt6udz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Test Name\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"t123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"t123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-posts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "protectedResource",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4MCwiaWF0IjoxNzA1Njg1NjcxLCJleHAiOjE3MDkyODIwNzF9.AVzNIt0j9a0SD2vL6XwieXjkJOENT5kZe1YRbUxml6I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/protected-resource",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"protected-resource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myComments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Kullanıcı yorum yapmışsa yorumlarını getirir"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Giriş yapmış kullanıcının bilgilerini getirir"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM4MCwiaWF0IjoxNzA1NjY0MTMxLCJleHAiOjE3MDkyNjA1MzF9.KR0BKzaLay8Sv0dKUSEoyOS87ytCRZVqCSMR8ph365Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/account/account/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"account",
+								"account",
+								"change-password"
+							]
+						},
+						"description": "Mevcut şifreyi değiştirme işlemi."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/account/account/delete-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"account",
+								"account",
+								"delete-account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "elasticSearch",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/elastic/get-all-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"elastic",
+								"get-all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/elastic/get-user/ucOqR40BPIxuOzKoKypN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"elastic",
+								"get-user",
+								"ucOqR40BPIxuOzKoKypN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostsByCategory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "categoryRates",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getPostByWeek",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Bu hafta yapılan paylaşımlar kategorileri sayıları ve hangi gün paylaşıldığı bilgilerini verir"
+					},
+					"response": []
+				},
+				{
+					"name": "userStats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Toplam kullanıcı sayısı Blog yazan kullanıcı sayısı ve sadece blog okuyan kullanıcı sayısını verir"
+					},
+					"response": []
+				},
+				{
+					"name": "getPostByMonth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Belirtilen ay içersinde yapılan paylaşımlar ve kategorileri"
+					},
+					"response": []
+				},
+				{
+					"name": "getPostByYear",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "Belirtilen yıl içersinde yapılan paylaşımlar ve kategorileri parametreye zaman aralığı verilmeli"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
